@@ -19,13 +19,21 @@ Software, architecture, and data index design for the 2018/2019 Virus Discovery 
 
 ##### Virus specific ones!
 
-ref_viruses_rep_genomes_v5	Subset of refseq_genomes “latest_refseq[Prop] AND viruses[Organism]”	
+1. ref_viruses_rep_genomes_v5 
+  * Reference Viral sequences
+  * Entrez query - “latest_refseq[Prop] AND viruses[Organism]”	
 
-ref_viroids_rep_genomes_v5	Subset of refseq_genomes “latest_refseq[Prop] AND viroids[Organism]”	
+2. ref_viroids_rep_genomes_v5	
+  * Reference Viroid Sequences 
+  * Entrez Query - “latest_refseq[Prop] AND viroids[Organism]”	
 
-NCBI_VIV_protein_sequences_v5	nr	Sergey Resenchuk supplied GI list	
+3. NCBI_VIV_protein_sequences_v5	
+  * Proteins from coding-complete, genomic viral sequences
+  * Equivalent to nr Entrez Query - Viruses[Organism] NOT cellular organisms[ORGN] NOT wgs[PROP] NOT gbdiv syn[prop] AND (srcdb_refseq[PROP] OR nuccore genome samespecies[Filter]) 
 
-NCBI_VIV_nucleotide_sequences_v5	nt	Sergey Resenchuk supplied GI list	
+4. NCBI_VIV_nucleotide_sequences_v5	
+  * Coding-complete, genomic viral sequences
+  * Equivalent to nt Entrez Query -	Viruses[Organism] NOT cellular organisms[ORGN] NOT wgs[PROP] NOT gbdiv syn[prop] AND (srcdb_refseq[PROP] OR nuccore genome samespecies[Filter]) 
 
 #### CONTIGS!
 
